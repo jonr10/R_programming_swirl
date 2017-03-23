@@ -213,4 +213,53 @@ my_data
 
 ```
 
+#Swirl R Programming: section 7: LOGIC
+Very basic logic.
+
+```{r}
+
+TRUE==TRUE
+(FALSE==TRUE)==FALSE
+6==7
+6<7
+10<=10
+5!=7
+!5==7
+FALSE&FALSE
+```
+
+## & versus && and | versus ||
+the first evalutes across a vector, the later across the first member of  vector
+
+```{r}
+TRUE & c(TRUE, FALSE, FALSE)
+TRUE && c(TRUE, FALSE, FALSE)
+TRUE | c(TRUE, FALSE, FALSE)
+TRUE || c(TRUE, FALSE, FALSE)
+```
+
+note: As you may recall, arithmetic has an order of operations and so do logical expressions. All AND operators are evaluated before OR operators. Let's look at an example of an
+```{r}
+5 > 8 || 6 != 8 && 4 > 3.9
+```
+## functions on logical operators
+
+Things like any and all could be useful to do basic tests on your input data as part
+
+```{r}
+isTRUE(6>4)
+identical('twins','twins')
+xor(5==6,!FALSE)
+ints<-sample(10)
+ints
+ints>5
+which(ints>7)
+any(ints<0)
+all(ints>0)
+```
+
+
+
+
+
 
